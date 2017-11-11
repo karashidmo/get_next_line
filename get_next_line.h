@@ -6,13 +6,18 @@
 /*   By: krashid- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 22:58:35 by krashid-          #+#    #+#             */
-/*   Updated: 2017/09/27 22:58:38 by krashid-         ###   ########.fr       */
+/*   Updated: 2017/11/11 07:59:45 by krashid-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft/libft.h"
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdio.h>
 
-#define	BUFF_SIZE 32
 
-char	*ft_get_file(int ac, char *av[]);
-int		get_next_line(const int fd, char **line);
-char	*ft_strrchr(const char *s, int c);
-void	ft_putendl(char const *s);
+#define	BUFF_SIZE 11
+#define FT_MAX_FD 1196434
+int	  get_next_line(const int fd, char **stock);
+int	  join(char **line, char *buff, int ret);
